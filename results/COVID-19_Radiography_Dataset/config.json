@@ -1,0 +1,21 @@
+{
+    "Model": "VGG16",
+    "Dataset": "COVID-19 Radiography Dataset",
+    "Classes": [
+        "COVID",
+        "Normal",
+        "Viral Pneumonia"
+    ],
+    "Epoch": 50,
+    "Batch_size": 32,
+    "Gradient_accumulation": 2,
+    "Effective_batch": 64,
+    "Learning_rate": 1e-05,
+    "Optimizer": "Adam",
+    "Loss": "CrossEntropyLoss with class weight",
+    "Image_size": "224x224",
+    "Normalization": "ImageNet",
+    "Fold": 5,
+    "Freeze": "VGG16 block1-block3",
+    "Fine_tune": "block4-block5 + classifier"
+}
